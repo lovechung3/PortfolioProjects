@@ -13,7 +13,7 @@ JOIN whr ON gdp.year = whr.year
     AND gdp.entity = whr.entity) AS newgdp
 JOIN continent ON newgdp.Entity = continent.country
 GROUP BY continent.[continent]
-ORDER BY continent.continent
+ORDER BY AVG(Happiness_Score) DESC
 -------------------------------------------------------------------------------------------------
 -- Analyzing distribution of happiness score by income bracket across the world.
 -- First, obtain the desired bracket and happiness information.
